@@ -1,6 +1,4 @@
-package kr.arumnarae.finder.Libs.HSUtillity.Class;
-
-import org.jetbrains.annotations.NotNull;
+package hs.utility.Class;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,7 +12,7 @@ public class HSInputStream extends InputStream
 {
     long TotalRead;
     InputStream inputstream;
-    public HSInputStream(@NotNull InputStream inputstream){this.inputstream = inputstream; TotalRead = 0;}
+    public HSInputStream(InputStream inputstream){this.inputstream = inputstream; TotalRead = 0;}
 
     public long getTotalRead(){return TotalRead;}
     public InputStream getStream(){return inputstream;}

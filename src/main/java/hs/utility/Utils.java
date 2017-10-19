@@ -11,8 +11,6 @@ package hs.utility;
      @exception class_name : 특정 메소드가 발생시킬 수 있는 에외상황을 기술할 때 사용된다.
      */
 
-import android.graphics.Bitmap;
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -110,34 +108,6 @@ public class Utils
                 if(HighValue&&tmp < Value[i])tmp = Value[i];
                 else if(!HighValue&&tmp > Value[i])tmp = Value[i];
             return tmp;
-        }
-    }
-
-    public static class ImageUtility {
-
-        public static Bitmap.CompressFormat getExtCompress(String mimeType)
-        {
-            if( "image/jpg".equals(mimeType) ||
-                "image/jpeg".equals(mimeType) ||
-                "image/pjpeg".equals(mimeType) ||
-                "image/jpeg".equals(mimeType) ||
-                "image/bmp".equals(mimeType) ||
-                "image/x-windows-bmp".equals(mimeType))
-                return Bitmap.CompressFormat.JPEG;
-            else if("image/webp".equals(mimeType)) return Bitmap.CompressFormat.WEBP;
-            else return Bitmap.CompressFormat.PNG;
-        }
-        public static String getExt(String mimeType)
-        {
-            if( "image/jpg".equals(mimeType) ||
-                    "image/jpeg".equals(mimeType) ||
-                    "image/pjpeg".equals(mimeType) ||
-                    "image/jpeg".equals(mimeType) ||
-                    "image/bmp".equals(mimeType) ||
-                    "image/x-windows-bmp".equals(mimeType))
-                return "jpg";
-            else if("image/webp".equals(mimeType)) return "webp";
-            else return "png";
         }
     }
 

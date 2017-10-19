@@ -1,4 +1,4 @@
-package kr.arumnarae.finder.Libs.HSUtillity.Class;
+package hs.utility.Class;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

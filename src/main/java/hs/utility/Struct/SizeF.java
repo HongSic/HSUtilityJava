@@ -22,8 +22,8 @@ public class SizeF {
     @Override
     public boolean equals(Object obj)
     {
-        SizeF size = (Size)obj;
-        if(SizeF == null)return false;
+        SizeF size = (SizeF)obj;
+        if(size == null)return false;
         else return size.Width == Width && size.Height == Height;
     }
 }
