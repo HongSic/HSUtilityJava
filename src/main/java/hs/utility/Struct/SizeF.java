@@ -1,4 +1,4 @@
-package kr.arumnarae.finder.Libs.HSUtillity.Structs;
+package hs.utility.Struct;
 
 /**
  * Created by ParkHongSic on 2016-09-10.
@@ -19,4 +19,11 @@ public class SizeF {
         return this;
     }
 
+    @Override
+    public boolean equals(Object obj)
+    {
+        SizeF size = (Size)obj;
+        if(SizeF == null)return false;
+        else return size.Width == Width && size.Height == Height;
+    }
 }
