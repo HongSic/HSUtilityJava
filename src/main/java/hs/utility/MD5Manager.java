@@ -1,4 +1,4 @@
-package kr.arumnarae.finder.Libs.HSUtillity;
+package hs.utility;
 
 import java.io.InputStream;
 

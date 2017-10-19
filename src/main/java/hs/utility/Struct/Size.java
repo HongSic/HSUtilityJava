@@ -1,5 +1,4 @@
 ﻿package hs.utility.Struct;
-
 /**
  * Created by ParkHongSic on 2016-09-10.
  * @author 박홍식 (ParkHongSic, 조장찡, gpo04174, HSKernel)

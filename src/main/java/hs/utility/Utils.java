@@ -1,4 +1,4 @@
-package kr.arumnarae.finder.Libs.HSUtillity;
+package hs.utility;
 
      /*
      자바 주석문 다는 방법
