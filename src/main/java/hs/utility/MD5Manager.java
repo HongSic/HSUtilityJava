@@ -32,7 +32,6 @@ public class MD5Manager
 
     public static String getMD5Hash(InputStream stream)
     {
-        byte[] array = null;
         try
         {
             java.security.MessageDigest md = java.security.MessageDigest.getInstance("MD5");
@@ -41,6 +40,8 @@ public class MD5Manager
             int numOfBytesRead;
             while((numOfBytesRead = stream.read(buffer)) > 0)
                 md.update(buffer, 0, numOfBytesRead);
+
+            byte[] array = md.digest();
 
             StringBuffer sb = new StringBuffer();
             for (int i = 0; i < array.length; ++i)
