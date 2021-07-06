@@ -12,16 +12,21 @@ public class WebClient
     public enum Method
     {
         GET,
-        POST
+        POST,
+        PUT,
+        PATCH,
+        DELETE,
+        COPY
     }
 
-    public static HttpURLConnection getHttpConnection(URL url, Method Method, HashMap<String,String> Param, HashMap<String,String> Header, WebClientSetting Setting) throws IOException
+    public static HttpURLConnection getHttpConnection(URL url, Method Method, HashMap<String,String> Param, HashMap<String,String> Header, WebClientSetting Setting) throws IOException  { return getHttpConnection(url, Method.toString(), Param, Header, Setting);}
+    public static HttpURLConnection getHttpConnection(URL url, String Method, HashMap<String,String> Param, HashMap<String,String> Header, WebClientSetting Setting) throws IOException
     {
         HttpURLConnection conn = (HttpURLConnection)url.openConnection();
         if(Setting == null) Setting = new WebClientSetting();
         Setting.ApplyConnection(conn);
 
-        conn.setRequestMethod(Method.toString());
+        conn.setRequestMethod(Method);
         conn.setDoInput(true);
         conn.setDoOutput(true);
         if(Header != null)
